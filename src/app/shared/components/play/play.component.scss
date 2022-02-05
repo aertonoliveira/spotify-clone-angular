@@ -1,0 +1,18 @@
+@import "../../../../assets/variable";
+.play {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 24px 16px;
+  height: 8vh;
+  position: absolute;
+  width: 100%;
+
+  left: 0px;
+  bottom: 0px;
+
+  /* Secondary/Secondary 01 */
+
+  background: $secondary1-color;
+}

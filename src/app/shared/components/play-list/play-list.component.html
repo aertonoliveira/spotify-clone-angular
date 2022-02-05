@@ -1,0 +1,19 @@
+<div class="play-list">
+  <div class="title">
+    <h1>PlayList</h1>
+    <img src="assets/svg/icons/dots.svg" alt="" />
+  </div>
+
+  <div class="list">
+    <img src="assets/svg/icons/folder-green.svg" alt="" />
+    <img src="assets/svg/icons/list-bullets.svg" alt="" />
+  </div>
+</div>
+
+<div class="listScroll">
+  <ul>
+    <li *ngFor="let item of playlists">
+      <a (click)="buscarPlayListId(item.id)">{{ item.nome }}</a>
+    </li>
+  </ul>
+</div>

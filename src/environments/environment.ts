@@ -3,8 +3,24 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
+  url: 'https://api.spotify.com/',
   production: false
 };
+export const SpotifyConfiguration = {
+  clientId: 'e3e43fe5ab9a4eaf8a56ac77ceee095e',
+  authEndpoint: 'https://accounts.spotify.com/authorize',
+  redirectUrl: 'http://localhost:4200/login',
+  scopes: [
+    "user-read-currently-playing", // musica tocando agora.
+    "user-read-recently-played", // ler musicas tocadas recentemente
+    "user-read-playback-state", // ler estado do player do usuario
+    "user-top-read", // top artistas e musicas do usuario
+    "user-modify-playback-state", // alterar do player do usuario.
+    "user-library-read", // ler biblioteca dos usuarios
+    "playlist-read-private", // ler playlists privads
+    "playlist-read-collaborative" // ler playlists colaborativas
+  ]
+}
 
 /*
  * For easier debugging in development mode, you can import the following file

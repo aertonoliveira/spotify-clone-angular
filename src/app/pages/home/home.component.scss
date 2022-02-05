@@ -1,0 +1,24 @@
+.sidebar-left {
+  grid-area: left;
+}
+.main {
+  grid-area: main;
+}
+.sidebar-right {
+  grid-area: right;
+}
+.play {
+  grid-area: play;
+}
+
+.container {
+  display: grid;
+  height: 100vh;
+  overflow: hidden;
+  grid-template-areas:
+    "left main right"
+    "play play play";
+  grid-template-columns: 256px 1fr 242px;
+  grid-template-rows: calc(100vh - 8vh) 8vh;
+  background-color: #2196f3;
+}
