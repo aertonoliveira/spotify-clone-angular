@@ -1,0 +1,19 @@
+@import "../../../../assets/variable";
+.sidebar-right {
+  background: $secondary1-color;
+  height: 100%;
+  padding: 10px;
+  .sidebar-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    h1 {
+      font-size: 14px;
+      font-weight: 500;
+      color: $secondary-color;
+      text-decoration: none;
+      font-weight: bold;
+    }
+  }
+}

@@ -3,7 +3,7 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  url: 'https://api.spotify.com/',
+  url: 'https://api.spotify.com',
   production: false
 };
 export const SpotifyConfiguration = {

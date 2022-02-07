@@ -10,18 +10,30 @@ import { SpotifyService } from 'src/app/shared/services/spotify.service';
 })
 export class PlayListComponent implements OnInit {
   playlists: any[] = [];
-  constructor(private spotifyService: SpotifyService) { }
+  constructor(private spotifyService: SpotifyService, private playListService: PlaylistsService) { }
 
   ngOnInit(): void {
     this.getPlayList();
+    this.getTeste();
   }
 
   async getPlayList() {
     this.playlists = await this.spotifyService.buscarPlaylistUsuario();
     console.log(this.playlists);
   }
-  buscarPlayListId(id: string) {
-    console.log(id)
-    // this.spotifyService.buscarPlaylistId(id);
+  buscarPlayListId(id: number) {
+    this.playListService.getPlaylistsById(id).subscribe(res => {
+      console.log(res);
+    }, error => {
+      console.log(error);
+    })
   }
+
+  getTeste() {
+    this.playListService.getPlaylists().subscribe(
+      (data) => {
+        console.log(data);
+      });
+  }
+
 }

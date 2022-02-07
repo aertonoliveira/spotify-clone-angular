@@ -1,16 +1,34 @@
-<div class="container">
-  <div class="sidebar-left">
-    <app-sidebar></app-sidebar>
+<div class="header-home">
+  <div>
+    <app-control-pages></app-control-pages>
+    <app-search></app-search>
   </div>
-  <div class="main">
-    asdasd
-    <!-- <app-sidebar></app-sidebar> -->
+  <div>
+    <app-avatar></app-avatar>
+    <app-notification></app-notification>
   </div>
-  <div class="sidebar-right">
-    asdasd
-    <!-- <app-sidebar></app-sidebar> -->
+</div>
+
+<div class="options">
+  <div class="btn liked-songs">
+    <img src="assets/svg/icons/heart-hover.svg" alt="" />
+    <h1>Liked Songs</h1>
   </div>
-  <div class="play">
-    <app-play></app-play>
+  <div class="btn recently">
+    <img src="assets/svg/icons/muisc-hover.svg" alt="" />
+    <h1>Liked Songs</h1>
+  </div>
+  <div class="btn friends">
+    <img src="assets/svg/icons/users-hover.svg" alt="" />
+    <h1>Liked Songs</h1>
+  </div>
+</div>
+
+<div class="your-albums">
+  <h1>Seus <span>Shows</span></h1>
+  <div class="albums">
+    <div *ngFor="let item of shows">
+      <app-card-muisc [item]="item.show"></app-card-muisc>
+    </div>
   </div>
 </div>

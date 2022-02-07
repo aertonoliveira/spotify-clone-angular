@@ -4,6 +4,12 @@ import { RequestService } from './services/request.service';
 import { PlayListComponent } from './components/play-list/play-list.component';
 import { PlayComponent } from './components/play/play.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
+import { SearchComponent } from './components/search/search.component';
+import { SidebarRightComponent } from './components/sidebar-right/sidebar-right.component';
+import { ControlPagesComponent } from './components/control-pages/control-pages.component';
+import { AvatarComponent } from './components/avatar/avatar.component';
+import { NotificationComponent } from './components/notification/notification.component';
+import { CardMuiscComponent } from './components/card-muisc/card-muisc.component';
 
 
 
@@ -11,11 +17,19 @@ const COMPONENTS = [
   SidebarComponent,
   PlayComponent,
   PlayListComponent,
+  SearchComponent,
+  SidebarRightComponent,
+  ControlPagesComponent,
+  AvatarComponent,
+  NotificationComponent,
+  CardMuiscComponent,
 ];
 
 @NgModule({
   declarations: [
     ...COMPONENTS,
+
+
   ],
   providers: [
     RequestService,

@@ -1,0 +1,35 @@
+.card-music {
+  display: flex;
+  flex-direction: column;
+  padding: 8px;
+  width: 176px;
+  height: 244px;
+
+  background: rgba(179, 179, 179, 0.1);
+  border-radius: 8px;
+  cursor: pointer;
+  .card-music_image {
+    img {
+      width: 160px;
+      height: 160px;
+    }
+  }
+  .card-music_info {
+    h1 {
+      font-style: normal;
+      font-weight: bold;
+      font-size: 14px;
+      line-height: 16px;
+      color: #fff;
+      margin-top: 8px;
+    }
+    p {
+      font-style: normal;
+      font-weight: normal;
+      font-size: 12px;
+      line-height: 16px;
+      color: #b3b3b3;
+      margin-top: 6px;
+    }
+  }
+}

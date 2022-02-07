@@ -1,0 +1,13 @@
+@import "../../../../assets/variable";
+.notification {
+  background: $secondary3-color;
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  padding: 10px;
+  margin-left: 15px;
+}

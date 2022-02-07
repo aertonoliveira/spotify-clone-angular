@@ -1,24 +1,97 @@
-.sidebar-left {
-  grid-area: left;
-}
-.main {
-  grid-area: main;
-}
-.sidebar-right {
-  grid-area: right;
-}
-.play {
-  grid-area: play;
+@import "../../../assets/variable";
+.header-home {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 10px;
+  div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 10px;
+  }
 }
 
-.container {
-  display: grid;
-  height: 100vh;
-  overflow: hidden;
-  grid-template-areas:
-    "left main right"
-    "play play play";
-  grid-template-columns: 256px 1fr 242px;
-  grid-template-rows: calc(100vh - 8vh) 8vh;
-  background-color: #2196f3;
+.options {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 10px;
+  margin-top: 15px;
+
+  div {
+    display: flex;
+    flex-direction: row;
+
+    align-items: center;
+    padding: 0px 10px;
+  }
+  .btn {
+    background: rgba(255, 255, 255, 0.1);
+    width: 316px;
+    height: 64px;
+    border-radius: 60px;
+    text-align: center;
+    cursor: pointer;
+    h1 {
+      font-weight: bold;
+      font-size: 20px;
+      line-height: 24px;
+      color: #fff;
+      margin-left: 40px;
+    }
+  }
+  .liked-songs {
+    img {
+      background: $gradient3-color;
+      padding: 16px;
+      border-radius: 50%;
+      margin-left: -10px;
+    }
+  }
+  .recently {
+    img {
+      background: $gradient2-color;
+      padding: 16px;
+      border-radius: 50%;
+      margin-left: -10px;
+    }
+  }
+  .friends {
+    img {
+      background: $gradient1-color;
+      padding: 16px;
+      border-radius: 50%;
+      margin-left: -10px;
+    }
+  }
+}
+.your-albums {
+  margin: 25px 20px;
+  h1 {
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 24px;
+    color: #fff;
+
+    margin-bottom: 15px;
+    span {
+      background: $gradient7-color;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  }
+  .albums {
+    display: flex;
+    flex-direction: row;
+    padding: 0px 10px;
+    width: 800px;
+    div {
+      margin-right: 15px;
+    }
+  }
 }

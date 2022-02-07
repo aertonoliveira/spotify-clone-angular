@@ -1,0 +1,29 @@
+@import "../../../../assets/variable";
+.avatar {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 4px 16px 4px 8px;
+
+  position: static;
+  width: 100%;
+  height: 46px;
+  left: 4px;
+  top: 0px;
+
+  /* Secondary/Secondary 03 */
+
+  background: #191414;
+  border-radius: 80px;
+  h1 {
+    font-size: 14px;
+    font-weight: bold;
+    color: #fff;
+    margin-left: 10px;
+  }
+  img {
+    border: 1px solid $primary-color;
+    border-radius: 50%;
+  }
+}

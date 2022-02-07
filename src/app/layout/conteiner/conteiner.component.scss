@@ -1,0 +1,29 @@
+@import "../../../assets/variable";
+
+.sidebar-left {
+  grid-area: left;
+}
+.main {
+  grid-area: main;
+  height: 100%;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+.sidebar-right {
+  grid-area: right;
+}
+.play {
+  grid-area: play;
+}
+
+.container {
+  display: grid;
+  height: 100vh;
+  overflow: hidden;
+  grid-template-areas:
+    "left main right"
+    "play play play";
+  grid-template-columns: 256px 1fr 242px;
+  grid-template-rows: calc(100vh - 8vh) 8vh;
+  background: linear-gradient(180deg, #393939 0%, #191414 100%);
+}
