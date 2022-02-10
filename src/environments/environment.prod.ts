@@ -1,4 +1,5 @@
 export const environment = {
+  url: '',
   production: true
 };
 export const SpotifyConfiguration = {
