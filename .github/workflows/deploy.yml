@@ -1,0 +1,38 @@
+name: Deploy to staging
+env:
+  BUCKET_NAME: spotify.aertonoliveira.com.br
+  SOURCE_DIR: dist/
+
+on:
+  push:
+    branches: [master]
+
+jobs:
+  buildAndDeploy:
+    name: Build and upload to s3
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Configure AWS Credentials
+        uses: aws-actions/configure-aws-credentials@v1
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: us-east-1
+
+      - uses: actions/checkout@v2
+      - name: Use Node.js 15.x
+        uses: actions/setup-node@v1
+        with:
+          node-version: 15.x
+      - run: npm install
+      - run: npm run build
+
+      - name: Sync with s3
+        run: aws s3 sync $SOURCE_DIR s3://$BUCKET_NAME --delete --acl public-read --follow-symlinks
+
+      - name: Sync locales with s3
+        run: aws s3 sync $SOURCE_DIR s3://$BUCKET_NAME --delete --acl public-read --follow-symlinks --cache-control no-cache --exclude '*' --include 'locales/*'
+
+      - name: Sync static with s3
+        run: aws s3 sync $SOURCE_DIR s3://$BUCKET_NAME --delete --acl public-read --follow-symlinks --cache-control no-cache --exclude '*' --include 'static/**/*'
