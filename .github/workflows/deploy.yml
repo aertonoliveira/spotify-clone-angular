@@ -1,7 +1,7 @@
 name: Deploy to staging
 env:
   BUCKET_NAME: spotify.aertonoliveira.com.br
-  SOURCE_DIR: dist/
+  SOURCE_DIR: dist/spotify-clone/
 
 on:
   push:
