@@ -5,11 +5,16 @@
   background: #ffffff;
   border-radius: 26px;
   padding: 0px 10px;
+
   align-self: center;
   justify-content: flex-start;
   display: flex;
   height: 32px;
   input {
     border: 0px;
+    margin-left: 10px;
+    &:focus {
+      outline: none;
+    }
   }
 }

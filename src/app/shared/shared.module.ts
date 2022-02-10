@@ -10,6 +10,8 @@ import { ControlPagesComponent } from './components/control-pages/control-pages.
 import { AvatarComponent } from './components/avatar/avatar.component';
 import { NotificationComponent } from './components/notification/notification.component';
 import { CardMuiscComponent } from './components/card-muisc/card-muisc.component';
+import { CarouselModule } from 'ngx-owl-carousel-o';
+import { CarouselComponent } from './components/carousel/carousel.component';
 
 
 
@@ -23,6 +25,7 @@ const COMPONENTS = [
   AvatarComponent,
   NotificationComponent,
   CardMuiscComponent,
+  CarouselComponent,
 ];
 
 @NgModule({
@@ -30,15 +33,18 @@ const COMPONENTS = [
     ...COMPONENTS,
 
 
+
   ],
   providers: [
     RequestService,
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    CarouselModule
   ],
   exports: [
     ...COMPONENTS,
+    CarouselModule
   ]
 
 })

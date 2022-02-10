@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { OwlOptions } from 'ngx-owl-carousel-o';
 import { PlaylistsService } from 'src/app/shared/services/playlists.service';
 
 
@@ -8,7 +9,10 @@ import { PlaylistsService } from 'src/app/shared/services/playlists.service';
   styleUrls: ['./home.component.scss']
 })
 export class HomeComponent implements OnInit {
+
+
   shows: any;
+  albums: any;
   constructor(private playListService: PlaylistsService) { }
 
   ngOnInit(): void {
@@ -20,13 +24,12 @@ export class HomeComponent implements OnInit {
     this.playListService.getShows().subscribe(
       (data) => {
         this.shows = data.items;
-        console.log(data);
       });
   }
   getAlbums() {
     this.playListService.getAlbums().subscribe(
       (data) => {
-        console.log(data);
+        this.albums = data.items;
       });
   }
 

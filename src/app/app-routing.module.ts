@@ -9,7 +9,7 @@ import { HomeComponent } from './pages/home/home.component';
 const routes: Routes = [
   { path: '', redirectTo: 'login', pathMatch: 'full' },
   {
-    path: 'home',
+    path: 'app',
     component: ConteinerComponent,
     loadChildren: () => import('./pages/pages.module').then(m => m.PagesModule),
     canLoad: [AutenticadoGuard]

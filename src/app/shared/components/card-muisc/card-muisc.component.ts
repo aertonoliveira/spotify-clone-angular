@@ -12,4 +12,8 @@ export class CardMuiscComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  getItemById(id: string) {
+
+  }
+
 }

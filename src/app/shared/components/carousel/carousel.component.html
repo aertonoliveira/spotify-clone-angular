@@ -1,0 +1,16 @@
+<owl-carousel-o [options]="customOptions" #owlCar>
+  <ng-container *ngFor="let item of items">
+    <ng-template carouselSlide>
+      <app-card-muisc *ngIf="item.show" [item]="item.show"></app-card-muisc>
+      <app-card-muisc *ngIf="item.album" [item]="item.album"></app-card-muisc>
+    </ng-template>
+  </ng-container>
+</owl-carousel-o>
+<div class="center">
+  <button role="presentation" class="owl-prev" (click)="owlCar.prev()">
+    <
+  </button>
+  <button role="presentation" class="owl-next" (click)="owlCar.next()">
+    >
+  </button>
+</div>

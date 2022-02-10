@@ -1,0 +1,38 @@
+@import "../../../../assets/variable";
+.center {
+  margin-top: -135px;
+  position: relative;
+  z-index: 3;
+  display: flex;
+  justify-content: space-between;
+  button {
+    height: 45px;
+    width: 45px;
+    border-radius: 50%;
+    background-color: $secondary3-color;
+    color: $secondary-color;
+    border: 0px;
+    font-size: 22px;
+    font-weight: bold;
+    cursor: pointer;
+    opacity: 0.3;
+    transition: 1s;
+    &:hover {
+      opacity: 1;
+    }
+  }
+  .owl-next {
+    right: 0px;
+    top: 50%;
+    transform: translateY(-50%);
+    position: relative;
+  }
+  .owl-prev {
+    position: relative;
+    left: -15px;
+    transform: translateY(-50%);
+  }
+}
+.owl-carousel .owl-stage-outer {
+  padding: 10px !important;
+}

@@ -24,11 +24,11 @@
   </div>
 </div>
 
-<div class="your-albums">
+<div class="your-shows">
   <h1>Seus <span>Shows</span></h1>
-  <div class="albums">
-    <div *ngFor="let item of shows">
-      <app-card-muisc [item]="item.show"></app-card-muisc>
-    </div>
-  </div>
+  <app-carousel [items]="shows"></app-carousel>
+</div>
+<div class="your-albums">
+  <h1>Sues <span>Albums</span></h1>
+  <app-carousel [items]="albums"></app-carousel>
 </div>

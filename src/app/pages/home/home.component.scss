@@ -70,8 +70,9 @@
     }
   }
 }
-.your-albums {
+.your-shows {
   margin: 25px 20px;
+  height: 284px;
   h1 {
     font-weight: bold;
     font-size: 20px;
@@ -85,13 +86,21 @@
       -webkit-text-fill-color: transparent;
     }
   }
-  .albums {
-    display: flex;
-    flex-direction: row;
-    padding: 0px 10px;
-    width: 800px;
-    div {
-      margin-right: 15px;
+}
+.your-albums {
+  margin: 25px 20px;
+  height: 284px;
+  h1 {
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 24px;
+    color: #fff;
+
+    margin-bottom: 15px;
+    span {
+      background: $gradient3-color;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
     }
   }
 }

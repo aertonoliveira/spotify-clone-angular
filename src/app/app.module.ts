@@ -11,6 +11,7 @@ import { LoginComponent } from './login/login.component';
 import { Interceptor } from './shared/services/header-interceceptor.service';
 import { ConteinerComponent } from './layout/conteiner/conteiner.component';
 import { SharedModule } from './shared/shared.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { SharedModule } from './shared/shared.module';
   ],
   imports: [
     BrowserModule,
+    BrowserAnimationsModule,
     HttpClientModule,
     AppRoutingModule,
     SharedModule,
