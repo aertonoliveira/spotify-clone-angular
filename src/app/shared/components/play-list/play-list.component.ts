@@ -22,11 +22,11 @@ export class PlayListComponent implements OnInit {
     console.log(this.playlists);
   }
   buscarPlayListId(id: number) {
-    this.playListService.getPlaylistsById(id).subscribe(res => {
-      console.log(res);
-    }, error => {
-      console.log(error);
-    })
+    // this.playListService.getPlaylistsById(id).subscribe(res => {
+    //   console.log(res);
+    // }, error => {
+    //   console.log(error);
+    // })
   }
 
   getTeste() {

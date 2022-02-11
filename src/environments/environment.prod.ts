@@ -1,11 +1,11 @@
 export const environment = {
-  url: '',
+  url: 'https://api.spotify.com',
   production: true
 };
 export const SpotifyConfiguration = {
   clientId: 'ab78c40dcb024892abcf6844bab80a8d',
   authEndpoint: 'https://accounts.spotify.com/authorize',
-  redirectUrl: 'http://localhost:4200/login/',
+  redirectUrl: 'https://spotify.aertonoliveira.com.br/login/',
   scopes: [
     "user-read-currently-playing", // musica tocando agora.
     "user-read-recently-played", // ler musicas tocadas recentemente

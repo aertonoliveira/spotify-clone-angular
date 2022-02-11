@@ -3,7 +3,7 @@ import { ListMusicComponent } from "./list-music.component";
 
 export const ListMusicRotas: Routes = [
   {
-    path: 'playlist',
+    path: 'playlist/:id',
     component: ListMusicComponent
   },
 
