@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { LOCALE_ID, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 
@@ -12,6 +12,11 @@ import { Interceptor } from './shared/services/header-interceceptor.service';
 import { ConteinerComponent } from './layout/conteiner/conteiner.component';
 import { SharedModule } from './shared/shared.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import localePt from '@angular/common/locales/pt';
+import { registerLocaleData } from '@angular/common';
+
+registerLocaleData(localePt);
+
 
 @NgModule({
   declarations: [
@@ -28,7 +33,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     SharedModule,
     Interceptor
   ],
-  providers: [],
+  providers: [
+    { provide: LOCALE_ID, useValue: 'pt-BR' }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+

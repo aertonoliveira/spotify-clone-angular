@@ -1,0 +1,34 @@
+<div class="music">
+  <div class="card-music">
+    <table class="table-music">
+      <thead>
+        <tr>
+          <th class="">TÍTULO</th>
+          <th class="">ÁLBUM</th>
+          <th class="">ADICIONADO EM</th>
+          <th class="">
+            <img src="../../../../assets/svg/icons/time.svg" />
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let item of music">
+          <th (click)="playMysic(item.track.id)">
+            <div class="music-title">
+              <div>
+                <img src="{{ item?.track?.album?.images[0]?.url }}" alt="" />
+              </div>
+              <div>
+                <p>{{ item.track.name }}</p>
+                <a>{{ returnArtists(item.track.artists) }}</a>
+              </div>
+            </div>
+          </th>
+          <th>{{ item.track.album.name }}</th>
+          <th>{{ item.added_at | date: "M/d/yy" }}</th>
+          <th>{{ returnTimeMusic(item.track.duration_ms) }}</th>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

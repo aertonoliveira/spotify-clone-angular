@@ -1,0 +1,27 @@
+.control {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  .control-sound {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background-color: transparent;
+
+    .sound-volume-bar {
+      width: 100px;
+      height: 4px;
+      background: #b2b2b271;
+      border-radius: 50px;
+      margin: 0px 5px;
+      .sound-volume-bar-fill {
+        height: 4px;
+        width: 30%;
+        background: #b2b2b2;
+        border-radius: 50px;
+      }
+    }
+  }
+}

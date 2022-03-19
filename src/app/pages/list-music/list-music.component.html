@@ -1,0 +1,26 @@
+<div class="header-home">
+  <div>
+    <app-control-pages></app-control-pages>
+    <app-search></app-search>
+  </div>
+  <div>
+    <app-avatar></app-avatar>
+    <app-notification></app-notification>
+  </div>
+</div>
+<div class="playlist">
+  <div class="avatar">
+    <img src="{{ playlist.images[0].url }}" />
+  </div>
+  <div class="description">
+    <h2>PlayList</h2>
+    <h1>{{ playlist.name }}</h1>
+    <div class="autor">
+      <p>
+        {{ playlist.owner.display_name }}.
+        <span>{{ playlist.tracks.total }}</span> musicas
+      </p>
+    </div>
+  </div>
+</div>
+<app-playlist-muisc [music]="playlist.tracks.items"></app-playlist-muisc>

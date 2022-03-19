@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 import { PlaylistsService } from 'src/app/shared/services/playlists.service';
 import { SpotifyService } from 'src/app/shared/services/spotify.service';
@@ -10,7 +11,7 @@ import { SpotifyService } from 'src/app/shared/services/spotify.service';
 })
 export class PlayListComponent implements OnInit {
   playlists: any[] = [];
-  constructor(private spotifyService: SpotifyService, private playListService: PlaylistsService) { }
+  constructor(private spotifyService: SpotifyService, private playListService: PlaylistsService, private router: Router,) { }
 
   ngOnInit(): void {
     this.getPlayList();
@@ -21,12 +22,8 @@ export class PlayListComponent implements OnInit {
     this.playlists = await this.spotifyService.buscarPlaylistUsuario();
     console.log(this.playlists);
   }
-  buscarPlayListId(id: number) {
-    // this.playListService.getPlaylistsById(id).subscribe(res => {
-    //   console.log(res);
-    // }, error => {
-    //   console.log(error);
-    // })
+  buscarPlayListId(id: string) {
+    this.router.navigate(['/app/playlist', id]);
   }
 
   getTeste() {

@@ -8,7 +8,7 @@ import { PlaylistsService } from 'src/app/shared/services/playlists.service';
   styleUrls: ['./list-music.component.scss']
 })
 export class ListMusicComponent implements OnInit {
-
+  playlist: any;
   constructor(
     public route: ActivatedRoute,
     private playListService: PlaylistsService
@@ -24,7 +24,7 @@ export class ListMusicComponent implements OnInit {
 
   getPlayListById(id: string) {
     this.playListService.getPlayListById(id).subscribe((data) => {
-      console.log(data);
+      this.playlist = data;
     });
   }
 

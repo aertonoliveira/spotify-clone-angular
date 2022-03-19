@@ -12,6 +12,10 @@ import { NotificationComponent } from './components/notification/notification.co
 import { CardMuiscComponent } from './components/card-muisc/card-muisc.component';
 import { CarouselModule } from 'ngx-owl-carousel-o';
 import { CarouselComponent } from './components/carousel/carousel.component';
+import { PlayMusicComponent } from './components/play-music/play-music.component';
+import { PlayMusicControlComponent } from './components/play-music-control/play-music-control.component';
+import { PlaySoundControlComponent } from './components/play-sound-control/play-sound-control.component';
+import { PlaylistMuiscComponent } from './components/playlist-muisc/playlist-muisc.component';
 
 
 
@@ -26,6 +30,11 @@ const COMPONENTS = [
   NotificationComponent,
   CardMuiscComponent,
   CarouselComponent,
+  PlayMusicComponent,
+  PlayMusicControlComponent,
+  PlaySoundControlComponent,
+  PlaylistMuiscComponent,
+
 ];
 
 @NgModule({

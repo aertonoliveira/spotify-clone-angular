@@ -1,0 +1,29 @@
+.music {
+  margin-top: 0px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  div {
+    margin-right: 10px;
+  }
+  h1 {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 14px;
+    color: #fff;
+  }
+  p {
+    font-family: Circular Std;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 10px;
+    line-height: 12px;
+    /* identical to box height, or 120% */
+
+    /* Neutral/Neutral 01 */
+
+    color: #b2b2b2;
+  }
+}

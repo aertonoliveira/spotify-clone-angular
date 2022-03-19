@@ -1,0 +1,52 @@
+@import "../../../../assets/variable";
+.control {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.control-play {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  width: 300px;
+  cursor: pointer;
+  margin-bottom: 5px;
+  div {
+    margin-right: 25px;
+  }
+  .shuffle {
+    margin-top: 8px;
+  }
+  .prev,
+  .next {
+    margin-top: -5px;
+  }
+}
+.progress {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  color: $neutral1-color;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 10px;
+  line-height: 12px;
+}
+.progress-bar {
+  height: 4px;
+  width: 600px;
+  background: $neutral2-color;
+  border-radius: 50px;
+  margin: 0px 5px;
+  .progress-bar-fill {
+    height: 4px;
+    width: 30%;
+    background: $gradient7-color;
+    border-radius: 50px;
+  }
+}

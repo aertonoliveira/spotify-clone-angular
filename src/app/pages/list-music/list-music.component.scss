@@ -1,0 +1,59 @@
+@import "../../../assets/variable";
+.header-home {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 10px;
+  background: $gradient1-color-opacity;
+
+  div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 10px;
+  }
+}
+.playlist {
+  display: flex;
+  flex-direction: row;
+  padding: 30px;
+  align-items: center;
+  height: 306px;
+  width: 100%;
+  background: $gradient1-color-opacity;
+  .avatar {
+    img {
+      width: 160px;
+      height: 160px;
+      background: #b2b2b2;
+      margin-right: 10px;
+    }
+  }
+  .description {
+    color: #fff;
+
+    h1 {
+      font-style: normal;
+      font-weight: 900;
+      font-size: 80px;
+      line-height: 96px;
+    }
+    .autor {
+      margin-top: 10px;
+      p {
+        font-style: normal;
+        font-weight: bold;
+        font-size: 16px;
+        line-height: 24px;
+
+        /* identical to box height, or 120% */
+
+        /* Neutral/Neutral 01 */
+
+        color: #fff;
+      }
+    }
+  }
+}
