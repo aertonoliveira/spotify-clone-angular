@@ -1,9 +1,9 @@
 <div class="music">
   <div>
-    <img src="../../../../assets/img/music.png" alt="" />
+    <img src="{{ music.track.album.images[0].url }}" alt="" />
   </div>
   <div>
-    <h1>No One Knows</h1>
-    <p>Queens of the Stone Age</p>
+    <h1>{{ music.track.name }}</h1>
+    <p>{{ returnArtists(music.track.artists) }}</p>
   </div>
 </div>

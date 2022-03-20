@@ -25,6 +25,9 @@ export class PlaylistsService {
   getAlbums(): Observable<any> {
     return this.service.get(`/v1/me/albums`);
   }
+  getAlbumsById(id: string): Observable<any> {
+    return this.service.get(`/v1/albums/${id}`);
+  }
   getFollowing(): Observable<any> {
     return this.service.get(`/v1/me/following`);
   }

@@ -16,6 +16,7 @@ import { PlayMusicComponent } from './components/play-music/play-music.component
 import { PlayMusicControlComponent } from './components/play-music-control/play-music-control.component';
 import { PlaySoundControlComponent } from './components/play-sound-control/play-sound-control.component';
 import { PlaylistMuiscComponent } from './components/playlist-muisc/playlist-muisc.component';
+import { AlbumMusicComponent } from './components/album-music/album-music.component';
 
 
 
@@ -34,6 +35,8 @@ const COMPONENTS = [
   PlayMusicControlComponent,
   PlaySoundControlComponent,
   PlaylistMuiscComponent,
+  AlbumMusicComponent,
+
 
 ];
 

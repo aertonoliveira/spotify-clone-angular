@@ -17,10 +17,18 @@
     <h1>{{ playlist.name }}</h1>
     <div class="autor">
       <p>
-        {{ playlist.owner.display_name }}.
+        {{ playlist?.owner?.display_name }}.
         <span>{{ playlist.tracks.total }}</span> musicas
       </p>
     </div>
   </div>
 </div>
-<app-playlist-muisc [music]="playlist.tracks.items"></app-playlist-muisc>
+<app-playlist-muisc
+  *ngIf="param === 'playlist'"
+  [music]="playlist.tracks.items"
+></app-playlist-muisc>
+
+<app-album-music
+  *ngIf="param === 'album'"
+  [music]="playlist.tracks.items"
+></app-album-music>

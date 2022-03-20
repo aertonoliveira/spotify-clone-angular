@@ -1,0 +1,76 @@
+@import "../../../../assets/variable";
+.music {
+  padding: 30px;
+  .table-music {
+    width: 100%;
+    thead {
+      font-style: normal;
+      font-weight: bold;
+      font-size: 10px;
+      line-height: 12px;
+      /* identical to box height, or 120% */
+
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: #777;
+
+      th {
+        padding: 10px;
+        text-align: left;
+        img {
+          width: 16px;
+          height: 16px;
+        }
+      }
+    }
+    tbody {
+      font-weight: normal;
+      font-size: 12px;
+      line-height: 14px;
+      /* identical to box height, or 117% */
+
+      /* Neutral/Neutral 01 */
+
+      color: #b3b3b3;
+      tr {
+        th {
+          padding: 10px;
+          text-align: left;
+        }
+      }
+      tr:hover {
+        background: $neutral3-color;
+      }
+    }
+  }
+}
+.music-title {
+  display: flex;
+  flex-direction: row;
+  div {
+    margin-right: 10px;
+    margin-right: 10px;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    p {
+      font-style: normal;
+      font-weight: bold;
+      font-size: 14px;
+      line-height: 16px;
+      color: #fff;
+    }
+    a {
+      font-style: normal;
+      font-weight: normal;
+      font-size: 12px;
+      line-height: 14px;
+      color: #b3b3b3;
+      margin-top: 5px;
+    }
+  }
+  img {
+    width: 48px;
+    height: 48px;
+  }
+}

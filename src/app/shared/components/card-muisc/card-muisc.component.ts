@@ -16,7 +16,7 @@ export class CardMuiscComponent implements OnInit {
   }
 
   getItemById(id: string) {
-    this.router.navigate(['/app/playlist', id]);
+    this.router.navigate(['/app/album', id]);
   }
 
 }

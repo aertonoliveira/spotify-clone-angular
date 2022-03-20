@@ -6,6 +6,7 @@ import { EventEmitter, Injectable } from '@angular/core';
 export class PlayerService {
 
   playlist: any;
+  private audio = new Audio();
   playMysicEvent: EventEmitter<any> = new EventEmitter<any>();;
   playMysic: any;
 
@@ -18,30 +19,39 @@ export class PlayerService {
   setPlayMysic(playMysic: any) {
     this.playlist.filter((music: any) => {
       if (music.track.id === playMysic) {
-        this.playMysic = music;
-        this.playMysicEvent.emit(this.playMysic.track.preview_url);
+        this.playMusic(music)
       }
     });
   }
 
+  playMusic(music: any) {
+    this.playMysic = music;
+    this.audio.src = music.track.preview_url;
+    this.audio.load();
+    this.audio.play();
+
+    this.playMysicEvent.emit(this.playMysic);
+
+  }
+
   play() {
-    return this.playMysic;
+    this.audio.play();
   }
-
+  pause() {
+    this.audio.pause();
+  }
   next() {
-    this.playMysic.next();
+    let idx = this.playlist.indexOf(this.playMysic);
+    if (idx >= 0 && idx <= this.playlist.length - 2) {
+      this.playMusic(this.playlist[idx + 1]);
+    }
+  }
+  prev() {
+    let idx = this.playlist.indexOf(this.playMysic);
+    if (idx >= 1) {
+      this.playMusic(this.playlist[idx - 1]);
+    }
   }
 
-  // prev() {
-  //   this.playMysic.prev();
-  // }
-
-  // setVolume(volume: number) {
-  //   this.playMysic.setVolume(volume);
-  // }
-
-  // setTime(time: number) {
-  //   this.playMysic.setTime(time);
-  // }
 
 }

@@ -3,13 +3,27 @@
     <div class="shuffle">
       <img src="../../../../assets/svg/icons/shuffle.svg" alt="" />
     </div>
-    <div class="prev">
+    <div class="prev" (click)="prev()">
       <img src="../../../../assets/svg/icons/arrow-alt-to-left.svg" alt="" />
     </div>
+
     <div class="player">
-      <img src="../../../../assets/svg/icons/play.svg" alt="" />
+      <img
+        *ngIf="playControl"
+        (click)="play()"
+        src="../../../../assets/svg/icons/play.svg"
+        alt=""
+      />
+
+      <img
+        *ngIf="pauseControl"
+        (click)="pause()"
+        src="../../../../assets/svg/icons/pause.svg"
+        alt=""
+      />
     </div>
-    <div class="next">
+
+    <div class="next" (click)="next()">
       <img src="../../../../assets/svg/icons/arrow-alt-to-right.svg" alt="" />
     </div>
     <div class="repeat">

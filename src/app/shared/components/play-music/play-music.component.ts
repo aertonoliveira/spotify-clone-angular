@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { PlayerService } from '../../services/player.service';
 
 @Component({
   selector: 'app-play-music',
@@ -6,10 +7,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./play-music.component.scss']
 })
 export class PlayMusicComponent implements OnInit {
-
-  constructor() { }
+  music: any;
+  constructor(private playerService: PlayerService) { }
 
   ngOnInit(): void {
+    this.playerService.playMysicEvent.subscribe(music => {
+      console.log(music);
+      this.music = music;
+    });
   }
 
+  returnArtists(value: any) {
+    return value.map((artist: any) => artist.name).join(', ');
+  }
 }
